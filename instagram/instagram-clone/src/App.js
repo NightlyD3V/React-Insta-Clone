@@ -17,7 +17,6 @@ class App extends Component {
       <div className="App">
         <SearchBar/>
         <PostContainer data={this.state.data}/>
-        <CommentContainer />
       </div>
     );
   }
