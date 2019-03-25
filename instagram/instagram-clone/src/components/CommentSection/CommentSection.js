@@ -1,10 +1,14 @@
 import React from 'react';
+import Comments from '../Comments/Comments';
 
 function CommentSection(props) {
+    //console.log(props);
     return (
         <div>
-            <h1>CommentSection</h1>
-            
+            <i class="far fa-heart"></i>
+            <i class="far fa-comment"></i>
+            <Comments comment={props}/>
+            <input></input>
         </div>
     )
 }

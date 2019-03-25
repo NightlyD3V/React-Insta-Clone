@@ -1,0 +1,22 @@
+.searchbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-instagram {
+    font-size: 30px;
+    padding: 10px;
+}
+input {
+    width: 300px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.fa-compass {
+    font-size: 30px;
+    padding: 10px;
+}
+.fa-user {
+    font-size: 30px;
+    padding: 10px;
+}
