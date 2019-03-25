@@ -8,7 +8,7 @@ function SearchBar() {
                 <i class="fab fa-instagram search"></i>
                 <h1 className="instagram-text">Instagram</h1>
             </div>
-            <input className="search-input"></input>
+            <input className="search-input" placeholder="Search"></input>
             <div className="search-icons">
                 <i class="far fa-compass"></i>
                 <i class="far fa-heart"></i>

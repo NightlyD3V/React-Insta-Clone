@@ -24,10 +24,10 @@ function PostContainer(props) {
     )
 }
 
-// PostContainer.proptypes = {
-//     data: PropTypes.arrayOf(PropTypes.shape({
-//         id: PropTypes.string,
-//     })),
-// };
+PostContainer.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string,
+    })),
+};
 
 export default PostContainer;

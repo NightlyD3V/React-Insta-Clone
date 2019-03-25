@@ -14,11 +14,11 @@
 }
 .fa-instagram {
     font-size: 30px;
-    padding: 10px;
+    padding-right: 10px;
     border-right: 1px solid black;
 }
 .instagram-text {
-    font-family: 'Satisfy', cursive;
+    font-family: 'Lobster Two', cursive;
     padding: 10px;
 }
 .search-input {
@@ -26,19 +26,8 @@
     border-radius: 5px;
     padding: 5px;
 }
-.fa-compass {
+.search-icons {
+    display: flex;
     font-size: 30px;
-    padding: 10px;
 }
-.fa-heart {
-    font-size: 30px;
-    padding: 10px;
-}
-.fa-comment {
-    font-size: 30px;
-    padding: 10px;
-}
-.fa-user {
-    font-size: 30px;
-    padding: 10px;
-}
+
