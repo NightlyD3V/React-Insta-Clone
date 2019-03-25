@@ -7,7 +7,6 @@ function PostContainer(props) {
     console.log(props);
     return (
         <div className="post-container">
-            <h1>Post Container</h1>
             {props.data.map((user) => (
                 <div key={user.id} className="post-container_user">
                     <div className="post-user_header">
@@ -15,7 +14,9 @@ function PostContainer(props) {
                         <h1>{user.username}</h1>
                     </div>
                     <img src={user.imageUrl} className="post-image"/>
-                    <p>{user.likes}</p>
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <p className="post-likes">{user.likes} likes</p>
                     <CommentSection data={user.comments}/>
                 </div>
             ))}

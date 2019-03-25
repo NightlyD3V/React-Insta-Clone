@@ -5,10 +5,8 @@ function CommentSection(props) {
     //console.log(props);
     return (
         <div>
-            <i class="far fa-heart"></i>
-            <i class="far fa-comment"></i>
             <Comments comment={props}/>
-            <input></input>
+            <input className="comment-input"></input>
         </div>
     )
 }

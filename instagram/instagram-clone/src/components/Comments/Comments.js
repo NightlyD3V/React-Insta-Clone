@@ -1,4 +1,5 @@
 import React from 'react';
+import './Comment.css';
 
 function Comments(props) {
     //console.log(props.comment)
@@ -6,7 +7,10 @@ function Comments(props) {
         <div>
             {props.comment.data.map((comment) => (
                 <div key={comment.id}>
-                    <p>{comment.username}{comment.text}</p>
+                    <div className="comment">
+                        <p className="user-name">{comment.username}</p>
+                        <p>{comment.text}</p>
+                    </div>
                 </div>
             ))}
         </div>

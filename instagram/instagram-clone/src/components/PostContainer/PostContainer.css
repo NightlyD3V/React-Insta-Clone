@@ -2,13 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 15px;
+    padding-top: 100px;
 }
 .post-container_user {
-    background-color: lightgrey;
+    border: 1px solid lightslategray;
+    background-color: white;
     margin-bottom: 30px;
     max-width: 800px;
     box-sizing: border-box;
-    padding: 50px;
+    padding: 10px;
 }
 .post-user_header {
     display: flex;
@@ -18,8 +21,15 @@
     border-radius: 100px;
     width: 50px;
     height: 50px;
+    margin-right: 15px;
 }
 .post-image {
     max-width: 100%;
+    max-height: 50%;
 }
-
+.post-likes {
+    font-weight: bold;
+}
+.input-container {
+    width: 100%;
+}
