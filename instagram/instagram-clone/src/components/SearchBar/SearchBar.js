@@ -6,9 +6,9 @@ function SearchBar() {
         <div className="searchbar-container">
             <div className="search-bar_logo">
                 <i class="fab fa-instagram search"></i>
-                <h1 className="instagram-text">Instagram</h1>
+                <h1 className="instagram-text">Instaclone</h1>
             </div>
-            <input className="search-input" placeholder="Search"></input>
+            <input src="" className="search-input" placeholder="Search"></input>
             <div className="search-icons">
                 <i class="far fa-compass"></i>
                 <i class="far fa-heart"></i>

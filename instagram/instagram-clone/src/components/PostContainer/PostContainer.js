@@ -11,11 +11,13 @@ function PostContainer(props) {
                 <div key={user.id} className="post-container_user">
                     <div className="post-user_header">
                         <img src={user.thumbnailUrl} className="user-thumbnail"/>
-                        <h1>{user.username}</h1>
+                        <h3>{user.username}</h3>
                     </div>
                     <img src={user.imageUrl} className="post-image"/>
-                    <i class="far fa-heart"></i>
-                    <i class="far fa-comment"></i>
+                    <div className="post-icons">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                    </div>
                     <p className="post-likes">{user.likes} likes</p>
                     <CommentSection data={user.comments}/>
                 </div>

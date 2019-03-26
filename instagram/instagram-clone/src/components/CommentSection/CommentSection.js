@@ -7,7 +7,14 @@ function CommentSection(props) {
     return (
         <div>
             <Comments comment={props}/>
-            <input className="comment-input" placeholder="Add comment"></input>
+            <div className="commentSection-input_container">
+                <div className="commentSection-input">
+                    <input className="comment-input" placeholder="Add a comment..."></input>
+                </div>
+                <div className="comment-ellipses">
+                    <button className="commentSection-button"><i class="fas fa-ellipsis-h"></i></button>
+                </div>
+            </div>
         </div>
     )
 }

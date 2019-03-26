@@ -1,5 +1,5 @@
 import React from 'react';
-import './Comment.css';
+import './Comments.css';
 
 function Comments(props) {
     //console.log(props.comment)
@@ -9,7 +9,7 @@ function Comments(props) {
                 <div key={comment.id}>
                     <div className="comment">
                         <p className="user-name">{comment.username}</p>
-                        <p>{comment.text}</p>
+                        <p className="comment-text">{comment.text}</p>
                     </div>
                 </div>
             ))}

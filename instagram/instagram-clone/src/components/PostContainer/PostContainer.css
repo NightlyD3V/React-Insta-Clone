@@ -6,7 +6,7 @@
     padding-top: 100px;
 }
 .post-container_user {
-    border: 1px solid lightslategray;
+    border: 1px solid lightgray;
     background-color: white;
     margin-bottom: 30px;
     max-width: 800px;
@@ -16,6 +16,7 @@
 .post-user_header {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 .user-thumbnail {
     border-radius: 100px;
@@ -24,12 +25,15 @@
     margin-right: 15px;
 }
 .post-image {
-    max-width: 100%;
+    max-width: auto;
     max-height: 50%;
+}
+.post-icons {
+    font-size: 25px;
 }
 .post-likes {
     font-weight: bold;
 }
 .input-container {
-    width: 100%;
+    width: 80%;
 }
