@@ -8,7 +8,8 @@ function PostContainer(props) {
     return (
         <div className="post-container">
             {props.data.map((user) => (
-                <div key={user.id} className="post-container_user">
+                <div key={user.id} className="post-container_user" data-aos="zoom-in"
+     data-aos-duration="500">
                     <div className="post-user_header">
                         <img src={user.thumbnailUrl} className="user-thumbnail"/>
                         <h3>{user.username}</h3>
