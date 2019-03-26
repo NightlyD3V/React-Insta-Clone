@@ -7,7 +7,7 @@ function CommentSection(props) {
     //console.log(props);
     return (
         <div>
-            <Comments comment={props}/>
+            <Comments comment={props} />
             <div className="commentSection-input_container">
                 <div className="commentSection-input">
                     <input className="comment-input" placeholder="Add a comment..."></input>

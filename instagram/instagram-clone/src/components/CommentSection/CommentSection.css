@@ -2,12 +2,14 @@
     display: flex;
     align-items: center;
     border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    width: 98%;
 }
 .commentSection-input {
     width: 93%;
-    border-radius: 5px;
     padding: 5px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .comment-input {
     width: 95%;
@@ -15,10 +17,11 @@
     border: none;
 }
 .commentSection-button {
-    height: 30px;
+    height: 35px;
     width: 50px;
     background-color: white;
     border: none;
+    margin-right: 10px;
 }
 .commentSection-button:hover {
     background-color: black;
@@ -26,5 +29,5 @@
 }
 .comment-ellipses {
     font-size: 25px;
-    margin-top: 10px;
+    margin-bottom: 5px;
 }
