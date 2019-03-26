@@ -28,6 +28,7 @@
 }
 .post-icons {
     font-size: 25px;
+    display: flex;
 }
 .post-icons .fa-heart:hover {
     color: red;
