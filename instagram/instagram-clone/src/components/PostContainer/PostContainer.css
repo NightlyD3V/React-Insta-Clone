@@ -31,9 +31,13 @@
 .post-icons {
     font-size: 25px;
 }
+.post-icons .fa-heart:hover {
+    color: red;
+}
 .post-likes {
     font-weight: bold;
+    margin-left: 10px;
 }
-.input-container {
-    width: 80%;
+.post-comment_container {
+    margin-left: 10px;
 }

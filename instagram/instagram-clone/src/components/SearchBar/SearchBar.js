@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './SearchBar.css';
 
 function SearchBar() {
@@ -17,5 +18,21 @@ function SearchBar() {
         </div>
     )
 } 
+
+SearchBar.propTypes = {
+    data: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string,
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        ImageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.arrayOf(PropTypes.shape({
+            id: PropTypes.string,
+            username: PropTypes.string,
+            text: PropTypes.string,
+        })),
+    })),
+}
 
 export default SearchBar;

@@ -19,7 +19,9 @@ function PostContainer(props) {
                         <i class="far fa-comment"></i>
                     </div>
                     <p className="post-likes">{user.likes} likes</p>
-                    <CommentSection data={user.comments}/>
+                    <div className="post-comment_container">
+                        <CommentSection data={user.comments}/>
+                    </div>
                 </div>
             ))}
         </div>
@@ -29,6 +31,16 @@ function PostContainer(props) {
 PostContainer.propTypes = {
     data: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string,
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        ImageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string,
+        comments: PropTypes.arrayOf(PropTypes.shape({
+            id: PropTypes.string,
+            username: PropTypes.string,
+            text: PropTypes.string,
+        })),
     })),
 };
 
