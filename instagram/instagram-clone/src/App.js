@@ -19,10 +19,12 @@ class App extends Component {
   componentDidMount = () => {
     window.AOS.init();
     this.setState({
-      data: dummyData,
+      data: localStorage.length === 0 ? dummyData : JSON.parse(localStorage.getItem('posts')),
       filteredData: dummyData,
     })
   }
+  
+
   // Adds new comment to post
   addNewComment = (comment, id) => {
     //console.log(this.state.data);
@@ -32,6 +34,8 @@ class App extends Component {
     this.setState({
         comment: '',
     })
+    const dummyDataCopy = this.state.data.slice();
+    localStorage.setItem('posts', JSON.stringify(dummyDataCopy));
   }
 
   // Handles changes for SearchBar

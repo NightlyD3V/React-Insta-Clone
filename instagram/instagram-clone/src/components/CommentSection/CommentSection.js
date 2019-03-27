@@ -17,7 +17,6 @@ class CommentSection extends React.Component {
         //console.log(this.props);
     }
     //console.log(props);
-
     handleChanges = (event) => {
         this.setState({
             [event.target.name] : event.target.value,
