@@ -41,7 +41,15 @@ class CommentSection extends React.Component {
                 <Comments comment={this.props} />
                 <div className="commentSection-input_container">
                     <form onSubmit={this.addComment} className="commentSection-input">
-                        <input type="text" name="comment" value={this.state.comment} onChange={this.handleChanges} className="comment-input" placeholder="Add a comment..."></input>
+                        <input 
+                            type="text" 
+                            name="comment" 
+                            value={this.state.comment} 
+                            onChange={this.handleChanges} 
+                            className="comment-input" 
+                            placeholder="Add a comment..."
+                            >
+                        </input>
                     </form>
                     <div className="comment-ellipses">
                         <button className="commentSection-button"><i class="fas fa-ellipsis-h"></i></button>

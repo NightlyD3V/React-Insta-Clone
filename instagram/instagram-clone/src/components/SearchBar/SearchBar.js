@@ -2,14 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './SearchBar.css';
 
-function SearchBar() {
+function SearchBar(props) {
     return (
         <div className="searchbar-container">
             <div className="search-bar_logo">
                 <i class="fab fa-instagram search"></i>
                 <h1 className="instagram-text">Instaclone</h1>
             </div>
-            <input src="" className="search-input" placeholder="Search"></input>
+            <form>
+                <input 
+                    type="text"
+                    name="search" 
+                    className="search-input" 
+                    placeholder="Search"
+                    onChange={props.handleChanges}
+                    value={props.post}
+                    >
+                </input>
+            </form>
             <div className="search-icons">
                 <i class="far fa-compass"></i>
                 <i class="far fa-heart"></i>
