@@ -1,0 +1,10 @@
+.comment {
+    display: flex;
+}
+.comment-text {
+    max-width: 500px;
+}
+.user-name {
+    font-weight: bold;
+    margin-right: 10px;
+}

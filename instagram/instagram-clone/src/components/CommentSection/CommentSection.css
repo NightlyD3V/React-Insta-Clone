@@ -1,0 +1,33 @@
+.commentSection-input_container {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    width: 98%;
+}
+.commentSection-input {
+    width: 93%;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.comment-input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+}
+.commentSection-button {
+    height: 35px;
+    width: 50px;
+    background-color: white;
+    border: none;
+    margin-right: 10px;
+}
+.commentSection-button:hover {
+    background-color: black;
+    color: white;
+}
+.comment-ellipses {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
