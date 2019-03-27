@@ -21,7 +21,7 @@ function PostContainer(props) {
                     </div>
                     <p className="post-likes">{user.likes} likes</p>
                     <div className="post-comment_container">
-                        <CommentSection data={user.comments} addNewComment={props.addNewComment} timestamp={user.timestamp}/>
+                        <CommentSection data={user.comments} addNewComment={props.addNewComment} id={user.id}/>
                         <h5 className="timestamp-text">{user.timestamp}</h5>
                     </div>
                 </div>

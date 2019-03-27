@@ -11,6 +11,7 @@ class App extends Component {
     this.state = {
       data: [],
       comment: '',
+      filteredData: Arrayfrom(data),
     }
   }
   
@@ -21,19 +22,25 @@ class App extends Component {
     })
   }
 
-  addNewComment = (comment, timestamp) => {
+  addNewComment = (comment, id) => {
     console.log(this.state.data);
-    const commentMatches = this.state.data.slice().filter(data => data.timestamp === timestamp).pop();
-    const commentDoesntMatch = this.state.data.slice().filter(data => data.timestamp !== timestamp);
-    //console.log(commentMatches && commentDoesntMatch);
-    commentMatches.comments.push(comment);
+    const commentMatches = this.state.data.slice().filter(data => data.id === id).pop();
+    console.log(commentMatches);
+    //commentMatches.comments.push(comment);
     this.setState({
         comment: '',
     })
   }
 
+  componentDidUpdate(prevProps, PrevState) {
+
+  }
   onHeartClick = () => {
     console.log('liked');
+    let likes = this.state.data.likes + 1;
+    this.setState({
+      data: likes,
+    })
   }
 
   render() {

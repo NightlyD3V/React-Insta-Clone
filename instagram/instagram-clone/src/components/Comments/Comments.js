@@ -7,7 +7,7 @@ function Comments(props) {
     return (
         <div>
             {props.comment.data.map((comment) => (
-                <div key={comment.id}>
+                <div key={comment.id} >
                     <div className="comment">
                         <p className="user-name">{comment.username}</p>
                         <p className="comment-text">{comment.text}</p>

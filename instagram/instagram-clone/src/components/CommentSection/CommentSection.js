@@ -29,10 +29,10 @@ class CommentSection extends React.Component {
         const newComment = {
             username: 'random',
             text: this.state.comment,
-            timestamp: Date.now(),
-        }
-        const timestamp = this.props.timestamp;
-        this.props.addNewComment(newComment, timestamp);
+            id: Date.now().toString(),
+        };
+        let id = this.props.id;
+        this.props.addNewComment(newComment, id);
     }
 
     render() {
