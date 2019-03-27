@@ -1,13 +1,19 @@
 import React from 'react';
 
 class LoginPage extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     render() {
         return (
-            <h1>Login Page</h1>
+            <div>
+                <h1>Login Page</h1>
+                <form>
+                    <input></input>
+                    <button onClick={this.props.handleLogin}>Submit</button>
+                </form>
+            </div>
         )
     }
 } 

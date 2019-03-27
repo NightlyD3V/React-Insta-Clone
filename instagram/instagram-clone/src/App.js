@@ -3,7 +3,7 @@ import './App.css';
 import dummyData from './dummy-data';
 import PostPage from './components/PostContainer/PostPage';
 import withAuthentication from './components/Authentication/Authentication';
-import LoginPage from './component/LoginPage/LoginPage';
+import LoginPage from './components/LoginPage/LoginPage';
 
 class App extends Component {
   constructor() {
@@ -51,6 +51,7 @@ class App extends Component {
       this.setState({
         data: dummyData,
       })
+      console.log(dummyData);
     }
     console.log(this.state.search);
   }

@@ -12,6 +12,7 @@ class PostContainer extends React.Component {
     }
     //console.log(props);
     render() {
+        console.log("Post container rendered");
         return (
             <div className="post-container">
                 {this.props.data.map((user) => (

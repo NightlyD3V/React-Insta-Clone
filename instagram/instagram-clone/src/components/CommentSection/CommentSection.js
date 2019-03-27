@@ -35,6 +35,7 @@ class CommentSection extends React.Component {
     }
 
     render() {
+        console.log("Comment section rendered");
         return (
             <div>
                 <Comments comment={this.props} />
