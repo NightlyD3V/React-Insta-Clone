@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data';
 import PostPage from './components/PostContainer/PostPage';
-
+import withAuthentication from './components/Authentication/Authentication';
+import LoginPage from './component/LoginPage/LoginPage';
 
 class App extends Component {
   constructor() {
@@ -55,11 +56,11 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.filteredData);
-    console.log(this.state.data);
+    //console.log(this.state.filteredData);
+    //console.log(this.state.data);
     return (
       <div className="App">
-        <PostPage 
+        <ComponentFromWithAuthentication
           data={this.state.data}
           comment={this.state.comment}
           filteredData={this.state.filteredData}
@@ -71,5 +72,7 @@ class App extends Component {
     );
   }
 }
+
+const ComponentFromWithAuthentication = withAuthentication(PostPage)(LoginPage);
 
 export default App;
