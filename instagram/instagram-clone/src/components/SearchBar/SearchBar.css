@@ -1,14 +1,3 @@
-.searchbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    z-index: 1;
-    background-color: white;
-    width: 100%;
-    height: 80px;
-    border-bottom: 1px solid lightgrey;
-}
 .search-bar_logo {
     display: flex;
     align-items: center;
@@ -17,13 +6,13 @@
 .fa-instagram {
     font-size: 50px;
     padding-right: 20px;
-    border-right: 1px solid grey;
 }
 .instagram-text {
     font-family: 'Lobster Two', cursive;
-    padding: 10px;
     font-size: 1.5rem;
     padding-left: 15px;
+    height: 30px;
+    border-left: 1px solid grey;
 }
 .search-input {
     width: 200px;

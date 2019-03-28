@@ -8,10 +8,12 @@
     position: relative;
     top: 100px;
     padding: 100px;
+    border-radius: 10px;
 }
 .header {
     font-family: 'Lobster Two', cursive;
     color: white;
+    padding-bottom: 15px;
 }
 .form {
     display: flex;

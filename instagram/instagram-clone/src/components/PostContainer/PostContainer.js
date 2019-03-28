@@ -18,7 +18,7 @@ class PostContainer extends React.Component {
           filteredData: this.props.data,
         })
       }
-      
+
     //console.log(props);
     render() {
         console.log("PostContainer rendered");

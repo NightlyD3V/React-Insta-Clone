@@ -1,6 +1,7 @@
 import React from 'react';
 import './LoginPage.css';
-import { Button } from 'reactstrap';
+import { Button, FormGroup, Input, InputGroup, InputGroupAddon } from 'reactstrap';
+
 
 class LoginPage extends React.Component {
     constructor() {
@@ -25,28 +26,33 @@ class LoginPage extends React.Component {
                 <h1 className="header">React InstaClone</h1>
                 <h1 className="header">Please Login</h1>
                 <form className="form" onSubmit={this.props.handleLogin}>
-                    <input 
-                        onChange={this.changeHandler} 
-                        name="userName" 
-                        className="user-input" 
-                        placeholder="User Name" 
-                        value={this.state.userName}
-                        required
-                        >
-                    </input>
-                    <input 
-                        onChange={this.changeHandler} 
-                        name="userPass" 
-                        className="user-pass" 
-                        type="password" 
-                        placeholder="Password" 
-                        required
-                        >
-                    </input>
-                    <button 
-                        className="login-button">
-                        Next
-                    </button>
+                    <FormGroup className="form">
+                    <InputGroup className="user-input">
+                        <InputGroupAddon addonType="prepend">@</InputGroupAddon>
+                        <Input
+                            onChange={this.changeHandler} 
+                            name="userName" 
+                            placeholder="User Name..." 
+                            value={this.state.userName}
+                            required
+                            >
+                        </Input>
+                    </InputGroup>
+                    <InputGroup className="user-pass">
+                        <Input 
+                            onChange={this.changeHandler} 
+                            name="userPass" 
+                            type="password" 
+                            placeholder="Password..." 
+                            required
+                            >
+                        </Input>
+                    </InputGroup>
+                        <Button outline color="primary" 
+                            className="login-button">
+                            Login
+                        </Button>
+                    </FormGroup>
                 </form>
             </div>
         )

@@ -3,6 +3,7 @@ import Comments from '../Comments/Comments';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
 import dummyData from '../../dummy-data';
+import { Button } from 'reactstrap';
 
 
 class CommentSection extends React.Component {
@@ -52,7 +53,7 @@ class CommentSection extends React.Component {
                         </input>
                     </form>
                     <div className="comment-ellipses">
-                        <button className="commentSection-button"><i className="fas fa-ellipsis-h"></i></button>
+                        <Button outline className="commentSection-button"><i className="fas fa-ellipsis-h"></i></Button>
                     </div>
                 </div>
             </div>
