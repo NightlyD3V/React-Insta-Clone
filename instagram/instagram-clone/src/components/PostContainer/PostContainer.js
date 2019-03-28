@@ -10,7 +10,13 @@ class PostContainer extends React.Component {
             liked: false,
         }
     }
-    
+    componentDidMount = () => {
+        window.AOS.init();
+        this.setState({
+          data: this.props.data,
+          filteredData: this.props.data,
+        })
+      }
     //console.log(props);
     render() {
         console.log("PostContainer rendered");

@@ -26,7 +26,7 @@ class App extends Component {
   }
   
   // Adds new comment to post
-  addNewComment = (comment, id) => {
+    addNewComment = (comment, id) => {
     //console.log(this.state.data);
     const commentMatches = this.state.data.slice().filter(data => data.id === id).pop();
     //console.log(commentMatches);
@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   // Handles changes for SearchBar
-  handleChanges = (event) => {
+    handleChanges = (event) => {
     //console.log(dummyData);
     //console.log('You hit the search bar');  
     const filtered = this.state.filteredData.filter((post) => post.username.includes(this.state.search)); 
