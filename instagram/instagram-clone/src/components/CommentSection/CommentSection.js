@@ -2,13 +2,12 @@ import React from 'react';
 import Comments from '../Comments/Comments';
 import PropTypes from 'prop-types';
 import './CommentSection.css';
-// import PostContainer from '../PostContainer/PostContainer';
 import dummyData from '../../dummy-data';
 
 
 class CommentSection extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
            data: dummyData.map(object => object.comments), 
            comment: '',
@@ -26,7 +25,7 @@ class CommentSection extends React.Component {
     addComment = (event) => {
         event.preventDefault();
         const newComment = {
-            username: 'random',
+            username: "Tyler",
             text: this.state.comment,
             id: Date.now().toString(),
         };
@@ -36,6 +35,7 @@ class CommentSection extends React.Component {
 
     render() {
         console.log("CommentSection rendered");
+        console.log(JSON.parse(localStorage.getItem('UserData')));
         return (
             <div>
                 <Comments comment={this.props} />

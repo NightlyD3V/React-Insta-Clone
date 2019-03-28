@@ -16,7 +16,6 @@ class App extends Component {
     }
   }
 
-  //localStorage.length === 0 ? dummyData : JSON.parse(localStorage.getItem('posts')),
   componentDidMount = () => {
     window.AOS.init();
     this.setState({
@@ -34,8 +33,9 @@ class App extends Component {
     this.setState({
         comment: '',
     })
-    // const dummyDataCopy = this.state.data.slice();
-    // localStorage.setItem('posts', JSON.stringify(dummyDataCopy));
+    const dummyDataCopy = this.state.data.slice();
+    localStorage.setItem('posts', JSON.stringify(dummyDataCopy));
+    //window.location.reload();
   }
 
   // Handles changes for SearchBar

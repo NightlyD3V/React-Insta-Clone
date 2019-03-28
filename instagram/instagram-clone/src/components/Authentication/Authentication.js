@@ -7,18 +7,32 @@ const withAuthentication = Component => Login =>
             super();
             this.state = {
                 isLoggedIn: false,
+                userName: 23423,
+                userPass: 234234,
             }
         }
 
-        handleLogin = () => {
+        handleLogin = (event) => {
+            localStorage.setItem('userData', JSON.stringify(this.state));
+            event.preventDefault();
             this.setState({
                 isLoggedIn: true,
+                userName: true,
+                userPass: true,
             })
+        }   
+
+        handleLogOut = (event) => {
+
         }
 
         render() {
         if(!this.state.isLoggedIn) {
-            return <Login handleLogin={this.handleLogin}/>
+            return <Login 
+                        handleLogin={this.handleLogin} 
+                        userName={this.state.userName}
+                        userPass={this.state.userPass}
+                    />
         } else {
             return (
                 <Component

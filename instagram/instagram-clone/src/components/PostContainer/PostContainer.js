@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import './PostContainer.css';
 
 class PostContainer extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             liked: false,
         }
     }
+    
     componentDidMount = () => {
         window.AOS.init();
         this.setState({
@@ -17,6 +18,7 @@ class PostContainer extends React.Component {
           filteredData: this.props.data,
         })
       }
+      
     //console.log(props);
     render() {
         console.log("PostContainer rendered");
