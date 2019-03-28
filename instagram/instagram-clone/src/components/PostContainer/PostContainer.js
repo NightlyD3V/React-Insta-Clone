@@ -10,22 +10,23 @@ class PostContainer extends React.Component {
             liked: false,
         }
     }
+    
     //console.log(props);
     render() {
-        console.log("Post container rendered");
+        console.log("PostContainer rendered");
         return (
             <div className="post-container">
                 {this.props.data.map((user) => (
                     <div key={user.id} className="post-container_user" data-aos="zoom-in"
                         data-aos-duration="500">
                         <div className="post-user_header">
-                            <img src={user.thumbnailUrl} className="user-thumbnail"/>
+                            <img src={user.thumbnailUrl} className="user-thumbnail" alt="User"/>
                             <h3>{user.username}</h3>
                         </div>
-                        <img src={user.imageUrl} className="post-image"/>
+                        <img src={user.imageUrl} className="post-image" alt="Post"/>
                         <div className="post-icons">
                             <div onClick={() => this.setState({liked: !this.state.liked})}><i className='far fa-heart like'></i></div>
-                            <div><i class="far fa-comment"></i></div>
+                            <div><i className="far fa-comment"></i></div>
                         </div>
                         <p className="post-likes">{this.state.liked === false ? user.likes : user.likes + 1} likes</p>
                         <div className="post-comment_container">

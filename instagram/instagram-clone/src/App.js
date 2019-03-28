@@ -15,16 +15,16 @@ class App extends Component {
       search: '',
     }
   }
-  
+
+  //localStorage.length === 0 ? dummyData : JSON.parse(localStorage.getItem('posts')),
   componentDidMount = () => {
     window.AOS.init();
     this.setState({
-      data: localStorage.length === 0 ? dummyData : JSON.parse(localStorage.getItem('posts')),
+      data: dummyData,
       filteredData: dummyData,
     })
   }
   
-
   // Adds new comment to post
   addNewComment = (comment, id) => {
     //console.log(this.state.data);
@@ -34,26 +34,25 @@ class App extends Component {
     this.setState({
         comment: '',
     })
-    const dummyDataCopy = this.state.data.slice();
-    localStorage.setItem('posts', JSON.stringify(dummyDataCopy));
+    // const dummyDataCopy = this.state.data.slice();
+    // localStorage.setItem('posts', JSON.stringify(dummyDataCopy));
   }
 
   // Handles changes for SearchBar
   handleChanges = (event) => {
+    //console.log(dummyData);
     //console.log('You hit the search bar');  
-    // this.state.search.length === 0 ? return '' : null;
     const filtered = this.state.filteredData.filter((post) => post.username.includes(this.state.search)); 
     this.setState({
       [event.target.name] : event.target.value,
       data: filtered,
     })
-    if(event.target.value.length === 0) {
+    if(event.target.value === "") {
       this.setState({
         data: dummyData,
       })
-      console.log(dummyData);
-    }
-    console.log(this.state.search);
+    } 
+    //console.log(this.state.search);
   }
 
   render() {

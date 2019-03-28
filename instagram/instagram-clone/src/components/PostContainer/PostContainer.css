@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
+    position: relative;
 }
 .post-container_user {
     border: 1px solid lightgray;

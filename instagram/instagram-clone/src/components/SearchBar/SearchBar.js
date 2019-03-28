@@ -6,7 +6,7 @@ function SearchBar(props) {
     return (
         <div className="searchbar-container">
             <div className="search-bar_logo">
-                <i class="fab fa-instagram search"></i>
+                <i className="fab fa-instagram search"></i>
                 <h1 className="instagram-text">Instaclone</h1>
             </div>
             <form>
@@ -21,9 +21,9 @@ function SearchBar(props) {
                 </input>
             </form>
             <div className="search-icons">
-                <i class="far fa-compass"></i>
-                <i class="far fa-heart"></i>
-                <i class="far fa-user"></i>
+                <i className="far fa-compass"></i>
+                <i className="far fa-heart"></i>
+                <i className="far fa-user"></i>
             </div>
         </div>
     )

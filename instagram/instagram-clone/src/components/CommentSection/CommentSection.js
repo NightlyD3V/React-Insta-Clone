@@ -35,7 +35,7 @@ class CommentSection extends React.Component {
     }
 
     render() {
-        console.log("Comment section rendered");
+        console.log("CommentSection rendered");
         return (
             <div>
                 <Comments comment={this.props} />
@@ -52,7 +52,7 @@ class CommentSection extends React.Component {
                         </input>
                     </form>
                     <div className="comment-ellipses">
-                        <button className="commentSection-button"><i class="fas fa-ellipsis-h"></i></button>
+                        <button className="commentSection-button"><i className="fas fa-ellipsis-h"></i></button>
                     </div>
                 </div>
             </div>

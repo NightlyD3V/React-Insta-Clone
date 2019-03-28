@@ -1,15 +1,16 @@
 import React from 'react';
 
 //HOC
-const withAuthentication = App => Login =>  
+const withAuthentication = Component => Login =>  
     class extends React.Component {
-            state = {
+        constructor() {
+            super();
+            this.state = {
                 isLoggedIn: false,
             }
+        }
 
-        handleLogin = (event) => {
-            event.preventDefault();
-            console.log('loggedIn');
+        handleLogin = () => {
             this.setState({
                 isLoggedIn: true,
             })
@@ -20,7 +21,7 @@ const withAuthentication = App => Login =>
             return <Login handleLogin={this.handleLogin}/>
         } else {
             return (
-                <App
+                <Component
                     data={this.props.data}
                     comment={this.props.comment}
                     filteredData={this.props.filteredData}
